@@ -30,6 +30,11 @@
 - upadate store with trailer video data
 - Embeded the youtube video and make it autoplay and mute
 - tailwind classes to make main container to awesome
+- build secondary container
+- fetch data from top rated , upcoming , popular movie api
+- store data in redux  with top rated , upcoming , popular movie in browse page 
+- read data from top rated , upcoming , popular movie in redux store at secondary container
+- custom hook for top rated,upcoming,popular movie 
 
 # features
 - Login/Signup page
