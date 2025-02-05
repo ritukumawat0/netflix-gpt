@@ -16,6 +16,11 @@
 - implemented signout
 - update profile call also
 - fetch movies from tmdb api
+- bug fix redirect user
+- unsubscribed to the onAuthStateChnaged callback
+- add hardcoded strings in constants.js
+- Register for TMDB API & create an app and access token
+- get data from tmdb nowplaying movies list
 
 # features
 - Login/Signup page
