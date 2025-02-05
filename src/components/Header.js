@@ -38,7 +38,7 @@ const Header = () => {
   }, []); 
   
   return (
-    <div className="flex justify-between w-full z-10 px-8 py-2 absolute bg-gradient-to-b from-black">
+    <div className="flex justify-between w-full z-10 px-8 py-2 absolute bg-gradient-to-b from-black bg-transparent">
       <img
         src={LOGO_URL}
         alt="logo"
@@ -47,14 +47,14 @@ const Header = () => {
       {user && (
         <div>
           {user?.displayName ? (
-            <span className="text-red-700 text-2xl mr-4">
+            <span className="text-red-700 text-2xl mr-4 font-bold">
               {user?.displayName}
             </span>
           ) : (
             <span className="text-red-700 text-4xl">👤</span>
           )}
 
-          <button onClick={handleSignOut} className="font-bold text-xl">
+          <button onClick={handleSignOut} className="font-bold text-xl text-white">
             SignOut
           </button>
         </div>
