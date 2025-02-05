@@ -21,6 +21,7 @@
 - add hardcoded strings in constants.js
 - Register for TMDB API & create an app and access token
 - get data from tmdb nowplaying movies list
+- add data in redux store moviesSlice
 
 # features
 - Login/Signup page
