@@ -39,6 +39,9 @@
   - gpt slice
   - gpt search toggle form redux store data
   - gpt search page on true
+- made select option for language on header
+- made configSlice
+- on gptsearch page made a feature for language prefrence  
 
 # features
 - Login/Signup page

@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO_URL } from "../utils/constants";
 import { toggleShowGptSearch } from "../utils/gptSlice";
+import { setLang } from "../utils/configSlice";
+import { langOptions } from "../utils/constants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -19,6 +21,10 @@ const Header = () => {
         navigate("/error");
       });
   };
+
+  const handleLangData = (e) =>{
+    dispatch(setLang(e.target.value))
+  }
 
   const handleShowGptSearch=()=>{
     dispatch(toggleShowGptSearch());
@@ -46,6 +52,11 @@ const Header = () => {
       <img src={LOGO_URL} alt="logo" className="w-44" />
       {user && (
         <div>
+          <select onClick={(e)=>handleLangData(e)} className="px-4 py-2 outline-none mr-4 font-semibold rounded-lg">
+              {langOptions.map((option)=>{
+                return <option key={option.identifier} value={option.name}>{option.name}</option>
+              })}
+          </select>
           <button onClick={handleShowGptSearch} className="py-2 px-8 text-white bg-purple-600 rounded-md mr-8 font-semibold hover:bg-purple-700">
             GPT Search
           </button>
