@@ -35,6 +35,10 @@
 - store data in redux  with top rated , upcoming , popular movie in browse page 
 - read data from top rated , upcoming , popular movie in redux store at secondary container
 - custom hook for top rated,upcoming,popular movie 
+- building gpt search feature
+  - gpt slice
+  - gpt search toggle form redux store data
+  - gpt search page on true
 
 # features
 - Login/Signup page
