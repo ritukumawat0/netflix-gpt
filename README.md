@@ -45,6 +45,8 @@
 - gpt search bar
 - memorization
 - made responsive website
+- add favicon icon
+- project title name
 
 # features
 - Login/Signup page
