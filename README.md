@@ -41,7 +41,10 @@
   - gpt search page on true
 - made select option for language on header
 - made configSlice
-- on gptsearch page made a feature for language prefrence  
+- on gptsearch page made a feature for language prefrence 
+- gpt search bar
+- memorization
+ 
 
 # features
 - Login/Signup page

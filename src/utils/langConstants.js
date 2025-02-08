@@ -8,7 +8,7 @@ const lang = {
         searchPlaceholderText:"आज क्या देखना चाहते हैं?"
     },
     Spanish:{
-        Search:"Search",
+        Search:"Buscar",
         searchPlaceholderText:"¿Qué quieres ver hoy?"
     },
     Korean:{

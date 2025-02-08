@@ -4,10 +4,10 @@ import VideoBackground from './VideoBackground'
 import { useSelector } from 'react-redux'
 
 function MainContainer() {
-    const movies = useSelector(store=>store.movies?.nowPlayingMovies)
+    const movies = useSelector(store=>store.movies?.nowPlayingMovies) 
+    console.log(movies)
     if(movies===null) return;
-    // const mainMovie = movies[Math.floor(Math.random()*movies.length)];
-    const mainMovie = movies[7];
+    const mainMovie = movies[0];
     const {original_title , overview , id} = mainMovie;
   return (
     <div>

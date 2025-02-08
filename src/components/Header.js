@@ -13,6 +13,7 @@ const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
+  const gptSearch =useSelector(store=>store.gpt.showGptSearch)
 
   const handleSignOut = () => {
     signOut(auth)
@@ -52,23 +53,25 @@ const Header = () => {
       <img src={LOGO_URL} alt="logo" className="w-44" />
       {user && (
         <div>
-          <select onClick={(e)=>handleLangData(e)} className="px-4 py-2 outline-none mr-4 font-semibold rounded-lg">
+
+          {gptSearch?<select onClick={(e)=>handleLangData(e)} className="px-4 py-2 outline-none mr-4 font-semibold rounded-lg">
               {langOptions.map((option)=>{
                 return <option key={option.identifier} value={option.name}>{option.name}</option>
               })}
-          </select>
+          </select>:null}
+          
           <button onClick={handleShowGptSearch} className="py-2 px-8 text-white bg-purple-600 rounded-md mr-8 font-semibold hover:bg-purple-700">
-            GPT Search
+            {gptSearch?"Home":"GPT Search"}
           </button>
           {user?.displayName ? (
-            <span className="text-red-400 text-2xl mr-4">
+            <span className="text-red-400  mr-4">
               {user?.displayName}
             </span>
           ) : (
             <span className="text-red-700 text-4xl">👤</span>
           )}
 
-          <button onClick={handleSignOut} className=" text-xl text-white">
+          <button onClick={handleSignOut} className="  text-white">
             SignOut
           </button>
         </div>
