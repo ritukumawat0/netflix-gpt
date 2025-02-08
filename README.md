@@ -44,7 +44,7 @@
 - on gptsearch page made a feature for language prefrence 
 - gpt search bar
 - memorization
- 
+- made responsive website
 
 # features
 - Login/Signup page

@@ -58,7 +58,7 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[10%]">
+    <div className="pt-[50%] sm:pt-[10%]">
       <div className="absolute -z-10 inset-0">
         <img
           src={BG_URL}
@@ -67,17 +67,17 @@ const GptSearchBar = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
-      <div className="rounded-lg mx-auto w-[60%] bg-black p-4">
+      <div className="rounded-lg mx-auto w-[80%] sm:w-[70%] sm:mt-20 bg-black p-4">
         <form onSubmit={(e) => e.preventDefault()}>
           <input
             ref={searchText}
-            className="rounded-md text-md w-[78%] mr-4 py-3 px-4 placeholder:text-md outline-none"
+            className="rounded-sm text-sm w-[100%] sm:w-[75%] mr-4 py-3 px-4 placeholder:text-sm outline-none"
             type="text"
             placeholder={lang[language].searchPlaceholderText}
           />
           <button
             onClick={handleOpenApiCall}
-            className="text-white rounded-md w-[20%] text-md px-2 py-3 bg-red-700"
+            className="text-white rounded-sm mt-4 sm:mt-0 w-[100%] sm:w-[20%] text-sm px-2 py-3 bg-red-700"
           >
             {lang[language].Search}
           </button>

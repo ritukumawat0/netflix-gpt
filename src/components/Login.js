@@ -94,7 +94,7 @@ const Login = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/3 max-lg:w-2/3 max-sm:w-full max-sm:mx-4 p-12 bg-black/70 rounded-lg">
+      <div className="absolute top-96 sm:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/3 max-lg:w-2/3 max-sm:w-full  p-12 bg-black/70 rounded-lg">
         <form onSubmit={(e) => e.preventDefault()}>
           <h1 className="text-white text-3xl font-bold mb-8">
             {isSignInForm ? "Sign In" : "Sign Up"}

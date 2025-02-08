@@ -11,7 +11,7 @@ const GptMovieSuggestions = () => {
 
   return (
     <div className=" bg-gradient-to-t from-black">
-      <div className="flex overflow-x-scroll scrollbar-hidden mt-64 z-50 relative bg-gradient-to-bl from-black">
+      <div className="flex overflow-x-scroll scrollbar-hidden mt-16 sm:mt-64 z-50 relative bg-gradient-to-bl from-black">
         {movieNames.map((movie, i) => (
           <MovieList key={movie} title={movieNames[i]} movies={gptMovies[i]} />
         ))}

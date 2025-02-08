@@ -48,19 +48,21 @@ const Header = () => {
     return () => unsubscribe(); // Cleanup to prevent memory leak
   }, []);
 
+  // by default mobile view and if you wrire md it means desktop
+
   return (
-    <div className="flex justify-between w-full z-10 px-8 py-2 absolute bg-gradient-to-b from-black bg-transparent">
-      <img src={LOGO_URL} alt="logo" className="w-44" />
+    <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-between w-full z-10 px-8 py-2 absolute bg-gradient-to-b from-black bg-transparent">
+      <img src={LOGO_URL} alt="logo" className="sm:w-44 w-28 sm:p-0 pb-4" />
       {user && (
         <div>
 
-          {gptSearch?<select onClick={(e)=>handleLangData(e)} className="px-4 py-2 outline-none mr-4 font-semibold rounded-lg">
+          {gptSearch?<select onClick={(e)=>handleLangData(e)} className="px-4 py-2 outline-none mr-2 sm:mr-4 font-semibold rounded-lg">
               {langOptions.map((option)=>{
                 return <option key={option.identifier} value={option.name}>{option.name}</option>
               })}
           </select>:null}
           
-          <button onClick={handleShowGptSearch} className="py-2 px-8 text-white bg-purple-600 rounded-md mr-8 font-semibold hover:bg-purple-700">
+          <button onClick={handleShowGptSearch} className="py-2 px-8 text-white bg-purple-600 rounded-sm mr-2 sm:mr-8 font-semibold hover:bg-purple-700">
             {gptSearch?"Home":"GPT Search"}
           </button>
           {user?.displayName ? (
@@ -71,7 +73,7 @@ const Header = () => {
             <span className="text-red-700 text-4xl">👤</span>
           )}
 
-          <button onClick={handleSignOut} className="  text-white">
+          <button onClick={handleSignOut} className="text-white sm:font-normal font-bold  sm:pt-0 pt-2">
             SignOut
           </button>
         </div>
